@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Task</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <!-- Favicons -->
+<link href="../assets/img/logo nex.png" rel="icon">
+<link href="../assets/img/logo nex.png" rel="apple-touch-icon">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Main CSS File -->
+<link href="../assets/css/main.css" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<style>
+  /* Custom CSS for the form and cards */
+  .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  .card-item {
+      flex: 1;
+      min-width: 300px;
+      max-width: 32%;
+      margin: 10px;
+  }
+  .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: none;
+      transition: all 0.3s ease;
+  }
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .task-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+  .task-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50px;
+  }
+  .task-list li:last-child {
+      border-bottom: none;
+  }
+  .task-icon {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      background: blue;
+      border-radius: 50%;
+  }
+  .img-fluid {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      margin-right: 15px;
+  }
+</style>
+</head>
+<body>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="index3.html" class="logo d-flex align-items-center me-auto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="../assets/img/logo_nex.png">
+            <!-- <h1 class="sitename">FlexStart</h1> -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li id="HomeLink"><a href="/starterPage/index.html" >Home<br></a></li>
+                <li id="ContactLink"><a href="../contact/contact2.html">Contact Us</a></li>
+                <li id="AboutLink"><a href="../about/about.html">About Us</a></li>
+                <li id="RegsLink"><a href="/regs/index.html">Register</a></li>
+                <li id="LoginLink"><a href="/LoginPage/index.html">Login</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+       
+
+    </div>
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="task-title">
+    <h3>Tasks</h3>
+    <p> Create Tasks</p>
+</div>
+<br>
+<br>
+
+<div class="container mt-4 d-flex justify-content-center">
+  <div class="card shadow p-4" style="width: 100%; max-width: 600px;">
+      <h2 class="card-title text-center">Create Task</h2>
+      <form id="taskForm">
+          <!-- Employee Name -->
+          <div class="form-group">
+              <label for="employeeName">Employee Name</label>
+              <input type="text" class="form-control" id="employeeName" placeholder="Enter employee name" required>
+          </div>
+
+          <!-- Title -->
+          <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" id="title" placeholder="Enter task title" required>
+          </div>
+
+          <!-- Start Date and End Date in the same row -->
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="startDate">Start Date</label>
+                  <input type="date" class="form-control" id="startDate" required>
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="endDate">End Date</label>
+                  <input type="date" class="form-control" id="endDate" required>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" rows="5" placeholder="Enter task description" required></textarea>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block">Create Task</button>
+      </form>
+  </div>
+</div>
+
+<div id="cardContainer" class="container card-container">
+  <div class="card card-item">
+      <div class="card-body">
+          <div class="row align-items-center">
+              <div class="col-auto">
+                  <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="dashboard-user">
+              </div>
+              <div class="col">
+                  <h5>John Doe</h5>
+                  <span>UX Designer</span>
+              </div>
+          </div>
+          <ul class="task-list">
+              <li>
+                  <i class="task-icon"></i>
+                  <h6>Anton Knudsen <span class="float-right text-muted">14 MAY</span></h6>
+                  <p class="text-muted">Lorem ipsum is dolorem…</p>
+              </li>
+              <!-- Repeat for more tasks -->
+          </ul>
+      </div>
+  </div>
+  <div class="card card-item">
+      <div class="card-body">
+          <div class="row align-items-center">
+              <div class="col-auto">
+                  <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="dashboard-user">
+              </div>
+              <div class="col">
+                  <h5>User Doe</h5>
+                  <span>UX Designer</span>
+              </div>
+          </div>
+          <ul class="task-list">
+              <li>
+                  <i class="task-icon"></i>
+                  <h6>Anton Knudsen <span class="float-right text-muted">14 MAY</span></h6>
+                  <p class="text-muted">Lorem ipsum is dolorem…</p>
+              </li>
+              <!-- Repeat for more tasks -->
+          </ul>
+      </div>
+  </div>
+  <div class="card card-item">
+      <div class="card-body">
+          <div class="row align-items-center">
+              <div class="col-auto">
+                  <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="dashboard-user">
+              </div>
+              <div class="col">
+                  <h5>John Doe</h5>
+                  <span>UX Designer</span>
+              </div>
+          </div>
+          <ul class="task-list">
+              <li>
+                  <i class="task-icon"></i>
+                  <h6>Anton Knudsen <span class="float-right text-muted">14 MAY</span></h6>
+                  <p class="text-muted">Lorem ipsum is dolorem…</p>
+              </li>
+              <li>
+                <i class="task-icon"></i>
+                <h6>Anton Knudsen <span class="float-right text-muted">14 MAY</span></h6>
+                <p class="text-muted">Lorem ipsum is dolorem…</p>
+            </li>
+            
+              <!-- Repeat for more tasks -->
+          </ul>
+      </div>
+  </div>
+  <div class="card card-item">
+    <div class="card-body">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="dashboard-user">
+            </div>
+            <div class="col">
+                <h5>John Doe</h5>
+                <span>UX Designer</span>
+            </div>
+        </div>
+        <ul class="task-list">
+            <li>
+                <i class="task-icon"></i>
+                <h6>Anton Knudsen <span class="float-right text-muted">14 MAY</span></h6>
+                <p class="text-muted">Lorem ipsum is dolorem…</p>
+            </li>
+            <li>
+              <i class="task-icon"></i>
+              <h6>Anton Knudsen <span class="float-right text-muted">14 MAY</span></h6>
+              <p class="text-muted">Lorem ipsum is dolorem…</p>
+          </li>
+          
+            <!-- Repeat for more tasks -->
+        </ul>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+</body>
+
+
+<main>
+  <div>
+      <br>
+  </div>
+  
+  </main>
+<hr class="">
+  <footer id="footer" class="footer">
+
+
+    
+      
+    
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6 footer-about">
+          <a href="" class="d-flex align-items-center">
+            <span class="sitename" style="color:  var(--accent-color);">HR Nexus</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Al-Sheikh Khalil St. </p>
+            <p>Irbid, jordan</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>07707777</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+       
+  
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="../about/about.html">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="../servicesPage/services.html">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="../about/about.html#team">Team</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html#services">Performance Management.</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html#services">Corporate Culture.</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html#services">Labor Relations Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html#services">Payroll and Benefits</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-12">
+          <h4>Follow Us</h4>
+          <p>You can follow us through these links</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+   
+  
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">HR Nexus</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="">HR Nexus</a>
+      </div>
+    </div>
+  
+  </footer>
+  
+      <!-- Scroll Top -->
+      <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+              class="bi bi-arrow-up-short"></i></a>
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<!-- Vendor JS Files -->
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/php-email-form/validate.js"></script>
+<script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+
+  
+
+
+
+
+  <!-- Bootstrap JS and dependencies (jQuery, Popper.js) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+  <script src="/scriptForALLPages/script.js"></script>
+</body>
+</html>

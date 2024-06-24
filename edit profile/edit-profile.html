@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile Page</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link href="../assets/img/logo nex.png "rel=icon>
+  <link href="../assets/img/logo nex.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+ <!-- Vendor CSS Files -->
+ <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+ <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+ <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+ <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="edit-profile.css">
+  
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <style>
+    .main {
+        padding: 20px;
+    }
+    .pagetitle {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .pagetitle h2 {
+        margin-bottom: 10px;
+    }
+    .pagetitle p {
+        color: #666;
+        font-size: 16px;
+    }
+    .card {
+        margin: auto;
+        max-width: 600px;
+    }
+    .circle-img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .btn-saveprofile, .btn-cancle, .btn-sm {
+        margin-top: 10px;
+    }
+    .btn-saveprofile {
+        background-color: #007bff;
+        color: white;
+    }
+    .btn-cancle {
+        margin-left: 10px;
+    }
+    .btn-sm {
+        margin-right: 5px;
+    }
+    #bio {
+        width: 100%;
+    }
+</style>
+</head>
+
+<body>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+        <a href="" class="logo d-flex align-items-center me-auto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="../Image/Logo.png" alt="">
+            <!-- <h1 class="sitename">FlexStart</h1> -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="../index/index.html">Home<br></a></li>
+                <li><a href="../servicesPage/services.html">Services</a></li>
+                <li><a href="../about/about.html">About</a></li>
+
+
+                </li>
+                <li><a href="../contact/contact2.html">Contact</a></li>
+                <li><a href="../about/about.html#team">Team</a></li>
+                <li><a href="#">Log Out</a></li>
+
+
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted flex-md-shrink-0" href="../profile/profile2.html"><i class="bi bi-person-check-fill"></i></a>
+
+    </div>
+</header>
+<main>
+    
+      
+<br>
+<br>
+<br>
+
+<!-- ahmad: rama need to make the form responsive and some edit for nav  -->
+<!-- ahmad: rama need to make the form responsive and some edit for nav  -->
+<!-- ahmad: rama need to make the form responsive and some edit for nav  -->
+<!-- ahmad: rama need to make the form responsive and some edit for nav  -->
+<!-- ahmad: rama need to make the form responsive and some edit for nav  -->
+
+
+<main id="main" class="main">
+  <div class="pagetitle" id="pagetitle">
+      <h2>Edit Profile</h2>
+      <p>Update your profile information and settings below</p>
+  </div>
+
+  <section class="section profile" id="sectionprofile">
+      <div class="col-xl-12">
+          <div class="card" id="card">
+              <div class="card-body pt-3">
+                  <div class="tab-content pt-2">
+                      <!-- Profile Edit Form -->
+                      <form oninput="onInput();" id="f1">
+                        <div class="row mb-3 justify-content-center">
+                          <div class="col-md-4 col-lg-3 text-center">
+                              <img src="../Image/blank-profile-picture-973460_960_720.webp" alt="Profile" class="circle-img" id="profileImg">
+                              <div class="pt-2">
+                                  <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image" id="changePicLink">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                                          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                                          <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+                                      </svg>
+                                  </a>
+                                  <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                                  <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image" id="rmv_img">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                      </svg>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+
+
+                          <div class="row mb-3">
+                              <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+                              <div class="col-md-8 col-lg-9">
+                                  <input name="fullName" type="text" class="form-control" id="fullName" value="">
+                              </div>
+                          </div>
+
+                          <div class="row mb-3">
+                              <label for="Job" class="col-md-4 col-lg-3 col-form-label">Position</label>
+                              <div class="col-md-8 col-lg-9">
+                                  <input name="job" type="text" class="form-control" id="Job" value="">
+                              </div>
+                          </div>
+
+                          <div class="row mb-3">
+                              <label for="bio" class="col-md-4 col-lg-3 col-form-label">Bio</label>
+                              <div class="col-md-8 col-lg-9">
+                                  <textarea rows="4" cols="50" name="comment" form="usrform" id="bio">Enter text here...</textarea>
+                              </div>
+                          </div>
+
+                          <div class="row mb-3">
+                              <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                              <div class="col-md-8 col-lg-9">
+                                  <input name="phone" type="text" class="form-control" id="Phone" value="">
+                              </div>
+                          </div>
+
+                          <div class="row mb-3">
+                              <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                              <div class="col-md-8 col-lg-9">
+                                  <input name="email" type="email" class="form-control" id="Email" value="">
+                                  <div id="errorEmail" style="color: red;"></div>
+                              </div>
+                          </div>
+
+                          <div class="row mb-3">
+                              <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                              <div class="col-md-8 col-lg-9">
+                                  <input name="password" type="password" class="form-control" id="currentPassword">
+                                  <p id="error" style="color: red;"></p>
+                              </div>
+                          </div>
+
+                          <div class="row mb-3">
+                              <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                              <div class="col-md-8 col-lg-9">
+                                  <input name="newpassword" type="password" class="form-control" id="newPassword">
+                                  <div id="error1" style="color: red;"></div>
+                              </div>
+                          </div>
+
+                          <div class="row mb-3">
+                              <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                              <div class="col-md-8 col-lg-9">
+                                  <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                                  <div id="error2" style="color: red;"></div>
+                              </div>
+                          </div>
+
+                          <div class="text-center">
+                              <a class="btn-saveprofile btn btn-success" href="" id="saveButt">Save Changes</a>
+                              <a class="btn-cancle btn btn-danger" href="../profile/profile2.html">Cancel</a>
+                          </div>
+                      </form>
+                      <!-- End Profile Edit Form -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</main>
+          
+          <footer id="footer" class="footer">
+          <hr>
+            
+  
+          
+            
+          
+            <div class="container footer-top">
+              <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 footer-about">
+                  <a href="" class="d-flex align-items-center">
+                    <span class="sitename" style="color:  var(--accent-color);">HR Nexus</span>
+                  </a>
+                  <div class="footer-contact pt-3">
+                    <p>Al-Sheikh Khalil St. </p>
+                    <p>Irbid, jordan</p>
+                    <p class="mt-3"><strong>Phone:</strong> <span>07707777</span></p>
+                    <p><strong>Email:</strong> <span>info@example.com</span></p>
+                  </div>
+                </div>
+               
+          
+                <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Useful Links</h4>
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html">Home</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="../about/about.html">About us</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="../servicesPage/services.html">Services</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="../about/about.html#team">Team</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Our Services</h4>
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html#services">Performance Management.</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html#services">Corporate Culture.</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html#services">Labor Relations Management</a></li>
+                    <li><i class="bi bi-chevron-right"></i> <a href="../index/index.html#services">Payroll and Benefits</a></li>
+                  </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-12" id="footer-links">
+                  <h4>Follow Us</h4>
+                  <p>You can follow us through these links</p>
+                  <div class="social-links d-flex">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+           
+          
+            <div class="container copyright text-center mt-4">
+              <p>© <span>Copyright</span> <strong class="px-1 sitename">HR Nexus</strong> <span>All Rights Reserved</span></p>
+              <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="">HR Nexus</a>
+              </div>
+            </div>
+          
+          </footer>
+          
+              <!-- Scroll Top -->
+              <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                      class="bi bi-arrow-up-short"></i></a>
+          
+     <script src="edit-profile.js"></script>     
+      
+<!-- Vendor JS Files -->
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/php-email-form/validate.js"></script>
+<script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+<!-- <script src="../assets/js/main.js"></script> -->
+<!-- Bootstrap JS with jQuery and Popper.js -->
+<!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/scriptForALLPages/script.js"></script>
+</body>
+</html>

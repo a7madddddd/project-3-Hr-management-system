@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Ahmad Omer",
+        "position": "HR Manager",
+        "department": "Human Resources",
+        "image": "/Images/1.jpg"
+        
+    },
+    {
+        "id": 2,
+        "name": "Samer Nedal",
+        "position": "Recruitment Specialist",
+        "department": "Human Resources",
+        "image": "/Images/2.jpg"
+        
+    },
+    {
+        "id": 3,
+        "name": "Majed Kamal",
+        "position": "Training Coordinator",
+        "department": "Learning and Development",
+        "image": "/Images/3.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Sajeda Abdullah",
+        "position": "Compensation Analyst",
+        "department": "Compensation and Benefits",
+        "image": "/Images/w1.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Anwar Mohammed",
+        "position": "HR Assistant",
+        "department": "Human Resources",
+        "image": "/Images/w2.jpg"
+        },
+    {
+        "id": 6,
+        "name": "Amani Saher",
+        "position": "Employee Relations Specialist",
+        "department": "Human Resources",
+        "image": "/Images/w3.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Sarah Yousef",
+        "position": "HR Generalist",
+        "department": "Human Resources",
+        "image": "/Images/w4.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Zain ABdullah",
+        "position": "Benefits Administrator",
+        "department": "Compensation and Benefits",
+        "image": "/Images/4.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "Salma Waleed ",
+        "position": "HR Coordinator",
+        "department": "Human Resources",
+        "image": "/Images/w5.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Haneen Rami",
+        "position": "Learning Specialist",
+        "department": "Learning and Development",
+        "image": "/Images/w6.jpeg"
+    }
+]

@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+/*  */
+/*  */
+body {
+    background: linear-gradient(90deg, white 50%, var(--accent-color) 50%) !important;
+    margin-top: 200px;
+}
+
+.portfolio {
+    padding: 6%;
+    
+}
+
+.heading {
+    background: #fff;
+    padding: 1%;
+    text-align: left;
+    box-shadow: 0px 0px 4px 0px #545b62;
+}
+
